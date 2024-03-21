@@ -1,0 +1,22 @@
+name = "hono-workers-template"
+compatibility_date = "2023-12-01"
+#node_compat = true
+main = "src/index.ts"
+# [vars]
+# MY_VARIABLE = "production_value"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+[[r2_buckets]]
+binding = "BUCKET" # i.e. available in your Worker on env.BUCKET
+bucket_name = "your-bucket-name"
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "your-db-name"
+database_id = "your-db-id"
+
+
+
